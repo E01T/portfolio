@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <!--
+    Name    : Portfolio Grunge
+    Coder   : Efthyvoulos Tsouderos
+    Website : http://www.Eftyvoulos-Tsouderos.me
+    -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Freelance designer/developer expert in HTML5, CSS3, JavaScript including jQuery, React, nodeJS, php, sql, Twitter Bootstrap to name a few. Website: www.lynda.com"/>
+    <title>Personal portfolio of Efthyvoulos Tsouderos, freelance designer and developer</title> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Simple Modal Window -->
+        <div id="dumbBoxWrap"> 
+            <div id="dumbBoxOverlay">&nbsp;</div>
+            <div id="vertical-offset"> 
+                <div id="dumbBox">
+                    <img id="project-image" src="">
+                    <header id="modal-header">
+                        <h2 id="project-name"></h2>
+                        <nav id="modal-navigation">
+                            <i id="left-arrow" class="fa fa-chevron-left fa-2x"></i>
+                            <i id="right-arrow" class="fa fa-chevron-right fa-2x"></i>
+                            <!-- <a id="close-modal">Close</a> -->
+                            <i id="close-modal" class="fa fa-times fa-2x"></i>
+                        </nav>
+                    </header>
+                    <p id="project-description"></p>
+                    <a id="project-url" href="" target="_blank"></a>
+                </div> 
+            </div> 
+        </div>
+        <header id="header">
+            <!-- START Logo -->
+            <div id="logo">
+                <a href="#">
+                    <img src="http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117619/portfolio/shpere.gif" alt="logo"/>
+                </a>
+                <h1 id="title">
+                    <a href="#"><span>web</span>Folio</a>
+                </h1>
+            </div>
+            <!-- END logo -->
+            <!-- START Social Media Buttons -->
+            <nav class="social-buttons">
+                <ul id="social-buttons">
+                    <li id="facebook">
+                        <a href="https://www.facebook.com/efthyvoulos.tsouderos">
+                            <img src="http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117621/portfolio/facebook.png" title="facebook" alt="facebook icon" target="_blank"/>
+                        </a>
+                    </li>
+                    <li id="linkedin">
+                        <a href="https://www.linkedin.com/in/efthyvoulostsouderos">
+                            <img src="http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117617/portfolio/linkedin.png" title="linkedin" alt="linkedin icon" target="_blank"/>
+                        </a>
+                    </li>
+                     <li id="codepen">
+                        <a href="http://codepen.io/E01T/">
+                            <img src="http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117623/portfolio/codepen.png" title="codepen" alt="codepen icon" target="_blank"/>
+                        </a>
+                    </li>
+                    <li id="github">
+                        <a href="https://github.com/e01t">
+                            <img src="http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117624/portfolio/github.jpg" title="github" alt="github icon" target="_blank"/>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- END Social Media Buttons -->
+            </header>
+            <!-- END masthead --> 
+            <div id="main">
+                <article id="content">
+                     <!-- START Left Column -->
+                    <section id="left-column">
+                        <div id="intro-text">
+                            <h2>Welcome</h2>
+                            <p>
+                                <a class="first_word" href="#" target="_self">Efthyvoulos Tsouderos</a><br>
+                                A freelance web designer/developer expert in HTML5, CSS3, JavaScript including jQuery, React, nodeJS, php, sql, Twitter Bootstrap to name a few. My work includes theme &amp; plugin developement for WordPress platform, and various front-end and isomorphic JavaScript applications <br><a class="read_more" href="https://www.linkedin.com/in/efthyvoulostsouderos" target="_blank">full resume...</a>
+                            </p>
+                        </div>
+                        <div id="skills" >
+                            <h3>Skills</h3>
+                                <ul>
+                                    <li>Photoshop, Fireworks and Illustrator</li>
+                                    <li>HTML5 & CSS3</li>
+                                    <li>Responsive Web Design</li>
+                                    <li>JavaScript, jQuery, React, NodeJS, Meteor</li>
+                                    <li>PHP, WordPress, Phalcon, Laravel</li>
+                                    <li>Databases, both relational and non-relational (Sql, NoSQL)</li>
+                                </ul>
+                        </div>
+                    </section>
+                    <!-- END Left Column -->
+
+                    <!-- START Right Column -->
+                    <section id="right-column">
+                        <div id="slider" autofocus="on">
+                            <img id="slider_img" src="http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117623/portfolio/img.jpg" alt="slider" />
+                        </div>
+                        <div id="lower-columns">
+                            <div id="project">
+                                <h3>Projects</h3>
+                                <ul id="project_box">
+                                    <li >
+                                        <a href="#">
+                                            <img tabindex="0" class="project-images" id="random-quote" src="http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117917/portfolio/random_quote_gen.png" title="Random Quote Generator" alt="random quote generator"/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img tabindex="1" class="project-images" id="local-weather" src="http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117618/portfolio/local_weather_app.png" title="Show Local Weather" alt="Show the Local Weather application"/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img tabindex="2" class="project-images" id="wikipedia-viewer" src="http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117621/portfolio/wiki_search.png" title="Wikipedia viewer" alt="wikipedia viewer"/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img tabindex="3" class="project-images" id="twitch-tv" src="http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117621/portfolio/twitch_tv.png" title="Twitch Tv" alt="twitch tv application"/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img tabindex="4" class="project-images" id="js-calc" src="http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117625/portfolio/calculator.png" title="JavaScript Calculator" alt="javascript calculator"/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img tabindex="5" class="project-images" id="camper-news" src="http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117622/portfolio/camper_news.png" title="Camper News" alt="camper news"/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img tabindex="6" class="project-images" id="pomodoro-clock" src="http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117618/portfolio/pomodoro.png" title="Pomodoro Clock" alt="pomodoro clock application"/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img tabindex="7" class="project-images" id="tic-tac-toe" src="http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117619/portfolio/tic_tac_toe.png" title="Tic Tac Toe Game" alt="Tic Tac Toe Game"/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img tabindex="8" class="project-images" id="simon-game" src="http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117618/portfolio/simon_game.png" title="Simon Game" alt="simon game"/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img tabindex="9" class="project-images" id="ncrypt-email" src="http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117619/portfolio/ncrypt_email.png" title="Ncryp Email WordPress Plugin" alt="encrypt email wordpress plugin"/>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- START Contact Form A.K.A. get_in_touch -->
+                            <div id="get_in_touch">
+                                <form action="emailme.php" method="post" autocomplete="on">
+                                    <fieldset>
+                                        <legend>Get in Touch</legend>
+                                        <ul id="contact_list">
+                                            <li>
+                                                <input tabindex="10" type="text" placeholder="Enter your full name" name="_name" title="Enter your full name" required class="text_input" id="name"/>
+                                            </li>
+                                            <li>
+                                                <input  tabindex="11" type="text" placeholder="Enter your email" name="_email" title="Enter your email" required class="text_input" id="email"/>
+                                            </li>
+                                            <li>
+                                                <textarea tabindex="12" rows="5" cols="20" placeholder="Leave your message" title="Leave your message" required id="message"/></textarea>
+                                            </li>
+                                        </ul>
+                                        <!-- <a tabindex="13" id="send" href="mailto:etsouderos@gmail.com">Send</a> -->
+                                        <input tabindex="13" id="send" type="submit" value="Send"/>
+                                    </fieldset>
+                                </form>
+                            </div> <!-- END Contact Form A.K.A. get_in_touch -->
+                        </div> <!-- END Lower Columns -->
+                    </section> <!-- END Right Column  -->
+                </article> <!-- END content -->
+            
+            </div>
+            <!-- END main -->
+
+            <footer id="footer">
+                &copy; 2016 Designed &amp; Developed by&nbsp;<a href="#">Efthyvoulos Tsouderos</a>
+            </footer>
+    </div>
+    <!-- END wrapper -->
+    <script   src="https://code.jquery.com/jquery-2.2.1.min.js"   integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="   crossorigin="anonymous">
+    </script>
+
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+        var $images = $('.project-images');
+        var $close_modal  = $('#close-modal');
+        var $dumbBoxWrap  = $('#dumbBoxWrap');
+        var $project_image  = $('#project-image'); // Modal Window
+        var $project_name = $('#project-name');
+        var $project_description = $('#project-description');
+        var $project_url = $('#project-url');
+        var index = 0;
+        var image_open = false;
+        var tabindex = 0;
+
+        /**
+         * A helper function to be used in subsequent functions
+         * in order to set/fill the appropriate modal window values.
+         * @param {[type]} integer: The array index of the project object
+         * @return {[type]} void
+         */
+        function setModalValues(index) {
+            $project_image.attr('src', projects[index].img_url);
+            $project_name.text(projects[index].name);
+            $project_description.text(projects[index].description);
+            $project_url.attr('href', projects[index].url);
+            $project_url.text(projects[index].name.toLowerCase());
+        }
+
+        /**
+         * Use left/right keyboard arrows to navigate through various projects
+         * @param  {[type]} event object passed by javascript
+         * @return {[type]} void
+         */
+        $(document).keydown(function(event) {
+            if (image_open) {
+                if(event.which == 37) { // left arrow
+                    index = index - 1;
+                    if (index == -1) {
+                        index = 9;
+                    }
+                    setModalValues(index);
+                }
+                else if (event.which == 39) { // rigth arrow
+                    index = (index + 1) % 10;
+                    setModalValues(index);
+                }
+            }
+            else
+                return;
+        });
+    
+        /**
+         * Click on left/right arrow icons to navigate through various projects
+         * @param  {[type]} event object passed by javascript
+         * @return {[type]} void
+         */
+        $('#left-arrow, #right-arrow').click(function(event) {
+            if (this.id == 'left-arrow') {
+                index = index - 1;
+                if (index == -1) {
+                    index = 9;
+                }
+                setModalValues(index);
+            }
+            else if (this.id == 'right-arrow') {
+                index = (index + 1) % 10;
+                setModalValues(index);
+            } 
+        });
+
+
+        /**
+         * Loop through each project image and attach a click event
+         * On click you fill the modal window with the relevant values
+         * @return {[type]} void
+         */
+        $images.each( function() {
+            var $image = $( this );
+            $image.on( 'click' , function(event) {
+                image_open = !image_open;
+                // console.log(image_open);
+                for(var i = 0; i < projects.length; i++) {
+                    if (this.id == projects[i].id) {
+                        index = i;
+                        setModalValues(index);
+                    }
+                }
+                $dumbBoxWrap.fadeIn(500);
+            });
+        });
+
+        // When the page loads focus on the first project image
+        $('.project-images')[0].focus();
+
+        /**
+         * When you focus on a project image you set the tabindex variable
+         * to be used in case on an Enter press
+         * @param  {[type]} event object passed by javascript
+         * @return {[type]} void
+         */
+        $('.project-images').on( 'focus', function(event) {
+            tabindex = document.activeElement.tabIndex;
+            // console.log(tabindex);
+        });
+
+
+         /**
+         * Listen for Enter keyboard presses to open focused project image
+         * @param  {[type]} event object passed by javascript
+         * @return {[type]} void
+         */
+        $(document).keydown(function(event) {
+            if (event.which == 13) { // Enter key
+                if ( $('.project-images').is(':focus') ) { // if the focus is on an image
+                    // console.log(event.which)
+                    image_open = !image_open;
+                    // console.log(image_open);
+                    index = tabindex;
+                    setModalValues(index);
+
+                    $dumbBoxWrap.fadeIn(500);
+                }
+            }
+            else
+                return;
+        });
+
+        /**
+         * Use the escape key to close the modal window
+         * @param  {[type]} event object passed by javascript
+         * @return {[type]} void
+         */
+        $(document).keyup(function(event) {
+            if (event.keyCode == 27) { // Escape key
+                image_open = !image_open;
+                console.log(image_open);
+                $dumbBoxWrap.fadeOut(500);
+            }
+            else 
+                return;
+        });
+
+         /**
+         * Click on the X icon to close the modal window
+         * @param  {[type]} event object passed by javascript
+         * @return {[type]} void
+         */
+        $close_modal.on( 'click', function(event) {
+            image_open = !image_open;
+            // console.log(image_open);
+            $dumbBoxWrap.fadeOut(500);
+        });
+
+        // An array of project objects
+        var projects = [
+            {
+                'id': 'random-quote',
+                'img_url': 'http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117917/portfolio/random_quote_gen.png',
+                'name': 'Random Quote Generator',
+                'description': "You can click a button to show me a new random quote. You can press a button to tweet out a quote.",
+                'url': 'http://codepen.io/E01T/full/NGpONW/'
+            },
+            {
+                'id': 'local-weather',
+                'img_url': 'http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117618/portfolio/local_weather_app.png',
+                'name': 'Show Local Weather',
+                'description': "You can see the weather in my current location. You can see a different background image (e.g. snowy mountain, hot desert) depending on the weather. Additional features include humidity, and temperature in Fahrenheit and Celsius.",
+                'url': 'http://codepen.io/E01T/full/wMQRmm/'
+            },
+            {
+                'id': 'wikipedia-viewer',
+                'img_url': 'http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117621/portfolio/wiki_search.png',
+                'name': 'Wikipedia Viewer',
+                'description': "You can search Wikipedia entries in a search box and see the resulting Wikipedia entries. You can click a button to see a random Wikipedia entry.",
+                'url': 'http://codepen.io/E01T/full/QjxrBY/'
+            },
+            {
+                'id': 'twitch-tv',
+                'img_url': 'http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117621/portfolio/twitch_tv.png',
+                'name': 'Twitch tv Application',
+                'description': "You can see whether Free Code Camp is currently streaming on Twitch.tv. You can click the status output and be sent directly to the Free Code Camp's Twitch.tv channel. If a Twitch user is currently streaming, I can see additional details about what they are streaming.You will see a placeholder notification if a streamer has closed their Twitch account (or the account never existed). You can verify this works by adding brunofin and comster404 to your array of Twitch streamers.",
+                'url': 'http://codepen.io/E01T/full/dYmBoy/'
+            },
+            {
+                'id': 'js-calc',
+                'img_url': 'http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117625/portfolio/calculator.png',
+                'name': 'JavaScript Calculator',
+                'description': "You can add, subtract, multiply and divide two numbers. You can clear the input field with a clear button. You can keep chaining mathematical operations together until you hit the equal button, and the calculator will tell me the correct output.",
+                'url': 'http://codepen.io/E01T/full/rOYPpb/'
+            },
+            {
+                'id': 'camper-news',
+                'img_url': 'http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117622/portfolio/camper_news.png',
+                'name': 'Camper News',
+                'description': 'Latest news from Free Code Campers. Sort them by rank(favoreted) or date posted.',
+                'url': 'http://codepen.io/E01T/full/YyvKRM/'
+            },
+            {
+                'id': 'pomodoro-clock',
+                'img_url': 'http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117618/portfolio/pomodoro.png',
+                'name': 'Pomodoro Clock',
+                'description': "You can start a 25 minute pomodoro, and the timer will go off once 25 minutes has elapsed. You can reset the clock for my next pomodoro. You can customize the length of each pomodoro.",
+                'url': 'http://codepen.io/E01T/full/vNmEzp/'
+            },
+            {
+                'id': 'tic-tac-toe',
+                'img_url': 'http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117619/portfolio/tic_tac_toe.png',
+                'name': 'Tic Tac Toe Game',
+                'description': "You can play a game of Tic Tac Toe with the computer. The game will reset as soon as it's over so I can play again. You can choose whether I want to play as X or O.",
+                'url': 'http://codepen.io/E01T/full/Qjxxwe/'
+            },
+            {
+                'id': 'simon-game',
+                'img_url': 'http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117618/portfolio/simon_game.png',
+                'name': 'Simon Game',
+                'description': "You are presented with a random series of button presses. Each time you input a series of button presses correctly, you see the same series of button presses but with an additional step. You hear a sound that corresponds to each button both when the series of button presses plays, and when you personally press a button. If you press the wrong button, you are notified that you have done so, and that series of button presses starts again to remind you of the pattern so you can try again. You can see how many steps are in the current series of button presses. If you want to restart, you can hit a button to do so, and the game will return to a single step. You can play in strict mode where if you get a button press wrong, it notifies you that you have done so, and the game restarts at a new random series of button presses. You can win the game by getting a series of 20 steps correct. You get notified of your victory, then the game starts over.",
+                'url': 'http://codepen.io/E01T/full/oxWXXY/'
+            },
+            {
+                'id': 'ncrypt-email',
+                'img_url': 'http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117619/portfolio/ncrypt_email.png',
+                'name': 'NCRYPT EMAIL',
+                'description': 'The most powerful e-mail address encryption tool. This plugin is based on mcrypt php library. Both the encryption and decryption occurs on the server. JavaScript is used (an AJAX Post Request) to dynamically contact the server, where the e-mail decryption happens and send back the results. Regardless of how many e-mails are on a webpage only ONE AJAX request takes place. It utilizes the load event which means that only when the page is fully loaded the request – response happens (it will not slow down your page rendering). The actual display happens when you hover over the e-mail. Native JavaScript is used (no library dependencies). It is lightning fast and only 4 kb small.',
+                'url': 'http://the-never-never-land.com/encrypt-email-address-wordpress-plugin/'
+            }
+        ];
+
+    }); // END OF document ready
+
+    </script>
+</body>
+</html>

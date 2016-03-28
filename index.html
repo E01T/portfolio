@@ -167,7 +167,7 @@
                             </div>
                             <!-- START Contact Form A.K.A. get_in_touch -->
                             <div id="get_in_touch">
-                                <form action="https://formspree.io/etsouderos@gmail.com" method="post" autocomplete="on">
+                                <form action="" method="post" autocomplete="on">
                                     <fieldset>
                                         <legend>Get in Touch</legend>
                                         <ul id="contact_list">
@@ -218,8 +218,8 @@
         var image_open = false;
         var tabindex = 0;
 
-        // Email form
-        $('#send').on('submit', function() {
+        // Form submission send to email via http://formspree.io/
+        $('#send').on('submit', function(event) {
             var name    = $('#name').val();
             var email   = $('#email').val();
             var message = $('#message').val();
@@ -230,6 +230,7 @@
                 data: { 'name': name, 'email': email, 'message': message },
                 dataType: "json"
             });
+            event..preventDefault();
         });
         
 

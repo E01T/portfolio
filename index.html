@@ -3,7 +3,7 @@
     <!--
     Name    : Portfolio Grunge
     Coder   : Efthyvoulos Tsouderos
-    Website : http://www.Eftyvoulos-Tsouderos.me
+    Website : http://e01t.github.io
     -->
 <head>
     <meta charset="UTF-8">
@@ -167,7 +167,7 @@
                             </div>
                             <!-- START Contact Form A.K.A. get_in_touch -->
                             <div id="get_in_touch">
-                                <form action="emailme.php" method="post" autocomplete="on">
+                                <form action="https://formspree.io/etsouderos@gmail.com" method="post" autocomplete="on">
                                     <fieldset>
                                         <legend>Get in Touch</legend>
                                         <ul id="contact_list">
@@ -175,13 +175,16 @@
                                                 <input tabindex="10" type="text" placeholder="Enter your full name" name="_name" title="Enter your full name" required class="text_input" id="name"/>
                                             </li>
                                             <li>
-                                                <input  tabindex="11" type="text" placeholder="Enter your email" name="_email" title="Enter your email" required class="text_input" id="email"/>
+                                                <input  tabindex="11" type="text"name="_replyto" placeholder="Enter your email" title="Enter your email" required class="text_input" id="email"/>
                                             </li>
                                             <li>
-                                                <textarea tabindex="12" rows="5" cols="20" placeholder="Leave your message" title="Leave your message" required id="message"/></textarea>
+                                                <input type="text" name="_gotcha" style="display:none" />
+                                            </li>
+                                            <li>
+                                                <textarea tabindex="12" rows="5" cols="20" placeholder="Leave your message" title="Leave your message" name="message" required id="message"/></textarea>
                                             </li>
                                         </ul>
-                                        <!-- <a tabindex="13" id="send" href="mailto:etsouderos@gmail.com">Send</a> -->
+                                        
                                         <input tabindex="13" id="send" type="submit" value="Send"/>
                                     </fieldset>
                                 </form>
@@ -214,6 +217,21 @@
         var index = 0;
         var image_open = false;
         var tabindex = 0;
+
+        // Email form
+        $('#send').on('submit', function() {
+            var name    = $('#name').val();
+            var email   = $('#email').val();
+            var message = $('#message').val();
+
+            $.ajax({
+                url: "https://formspree.io/etsouderos@gmail.com", 
+                method: "POST",
+                data: { 'name': name, 'email': email, 'message': message },
+                dataType: "json"
+            });
+        });
+        
 
         /**
          * A helper function to be used in subsequent functions

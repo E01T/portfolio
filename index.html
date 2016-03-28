@@ -217,12 +217,15 @@
         var index = 0;
         var image_open = false;
         var tabindex = 0;
+        var name    = '';
+        var email   = '';
+        var message = '';
 
         // Form submission send to email via http://formspree.io/
         $('#send').on('submit', function(event) {
-            var name    = $('#name').val();
-            var email   = $('#email').val();
-            var message = $('#message').val();
+            name    = $('#name').val();
+            email   = $('#email').val();
+            message = $('#message').val();
 
             event.preventDefault();
 
@@ -231,7 +234,12 @@
                 method: "POST",
                 data: { 'name': name, 'email': email, 'message': message },
                 dataType: "json"
-            }).done(function(data){ window.location = 'http://e01t.github.io'; });
+            }).done(function(data) { 
+                window.location = 'http://e01t.github.io'; 
+                name.val('');
+                email.val('');
+                message.val('');
+            });
         });
         
 

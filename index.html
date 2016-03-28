@@ -237,12 +237,14 @@
                 method: "POST",
                 data: { 'name': name, 'email': email, 'message': message },
                 dataType: "json"
-            }).done(function(data) { 
-                window.location = 'http://e01t.github.io'; 
-                name.val('');
-                email.val('');
-                message.val('');
             });
+
+            // .done(function(data) { 
+            //     window.location = 'http://e01t.github.io'; 
+            //     name.val('');
+            //     email.val('');
+            //     message.val('');
+            // })
         });
         
 

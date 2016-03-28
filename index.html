@@ -220,15 +220,15 @@
         var index = 0;
         var image_open = false;
         var tabindex = 0;
-        var name    = '';
-        var email   = '';
-        var message = '';
+        var name    = $('#name');
+        var email   = $('#email');
+        var message = $('#message');
 
         // Form submission send to email via http://formspree.io/
         $('#send').on('submit', function(event) {
-            name    = $('#name').val();
-            email   = $('#email').val();
-            message = $('#message').val();
+            $name.val();
+            $email.val();
+            $message.val();
 
             event.preventDefault();
 
@@ -241,9 +241,9 @@
 
             // .done(function(data) { 
             //     window.location = 'http://e01t.github.io'; 
-            //     name.val('');
-            //     email.val('');
-            //     message.val('');
+            //     $name.val('');
+            //     $email.val('');
+            //     $message.val('');
             // })
         });
         

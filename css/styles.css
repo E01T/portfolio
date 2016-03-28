@@ -343,13 +343,15 @@ ul#contact_list li {
 }
 
 /* The following two rules overide the default google chrome autofill behaviour */
-input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+#name:-webkit-autofill, #email:-webkit-autofill, #message:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 	background-color: transparent !important; 
     color: #c4d92e !important;
     background-image: none !important;
+     -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
-input:-webkit-autofill:hover, textarea:-webkit-autofill:hover, select:-webkit-autofill:hover {
+#name:-webkit-autofill:hover, #email:-webkit-autofill:hover, #message:-webkit-autofill:hover, textarea:-webkit-autofill:hover, select:-webkit-autofill:hover {
 	background-image: url('http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117619/portfolio/blacktrans.png') !important;
+	 -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 
 ul#contact_list li #name, #email , #message, #send {
@@ -410,6 +412,33 @@ legend {
     font-size: 1.2em;
     text-align: center;
     margin: .5em auto;
+}
+
+.hide-me {
+    -moz-animation: cssAnimation 0s ease-in 5s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in 5s forwards;
+    /* Opera */
+    animation: cssAnimation 0s ease-in 5s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
 }
 
 /* ==== Footer ==== */

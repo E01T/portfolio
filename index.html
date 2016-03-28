@@ -167,7 +167,7 @@
                             </div>
                             <!-- START Contact Form A.K.A. get_in_touch -->
                             <div id="get_in_touch">
-                                <form id="contact-form" action="https://formspree.io/etsouderos@gmail.com" method="post">
+                                <form id="contact-form" action="https://formspree.io/etsouderos@gmail.com" method="post" autocomplete="off">
                                     <fieldset>
                                         <legend>Get in Touch</legend>
                                         <ul id="contact_list">
@@ -175,7 +175,7 @@
                                                 <input tabindex="10" type="text" placeholder="Enter your full name" name="_name" title="Enter your full name" required class="text_input" id="name"/>
                                             </li>
                                             <li>
-                                                <input  tabindex="11" type="text"name="_replyto" placeholder="Enter your email" title="Enter your email" required class="text_input" id="email"/>
+                                                <input  tabindex="11" type="email" name="_replyto" placeholder="Enter your email" title="Enter your email" required class="text_input" id="email"/>
                                                 <input type="text" name="_gotcha" style="display:none" />
                                                 <input type="hidden" name="_next" value="http://e01t.github.io" />
                                             </li>
@@ -183,10 +183,10 @@
                                                 <textarea tabindex="12" rows="5" cols="20" placeholder="Leave your message" title="Leave your message" name="message" required id="message"/></textarea>
                                             </li>
                                         </ul>
-                                        
                                         <input tabindex="13" id="send" type="submit" value="Send"/>
                                     </fieldset>
                                 </form>
+                                <div class="form-message"></div>
                             </div> <!-- END Contact Form A.K.A. get_in_touch -->
                         </div> <!-- END Lower Columns -->
                     </section> <!-- END Right Column  -->
@@ -220,33 +220,40 @@
         var $email   = $('#email');
         var $message = $('#message');
         var $contact_form = $('#contact-form');
+        var $form_message = $('div.form-message');
+
+        // reset form message
+        function resetFormMessage() {
+            setTimeout(function() {
+                $form_message.text('');
+                $form_message.removeClass('hide-me');
+            }, 6000);
+        }
 
         // Form submission send to email via http://formspree.io/
         $contact_form.on('submit', function(event) {
-            
-            // { 'name': name, 'email': email, 'message': message } // old data: 
-
             event.preventDefault();
-
+        
             $.ajax({
                 url: "https://formspree.io/etsouderos@gmail.com", 
                 method: "POST",
                 data: $(this).serialize(),
                 dataType: "json",
                 beforeSend: function() {
-                    $contact_form.append('<div class="form-message alert--loading">Sending message…</div>');
+                    $form_message.text('Sending message…');
+                    $form_message.addClass('hide-me');
                 },
                 success: function(data) {
-                    $contact_form.find('.alert--loading').hide();
-                    $contact_form.append('<div class="form-message alert--success">Message sent!</div>');
+                    $form_message.text('Message sent!');
                     // Empty contact form
                     $name.val('');
                     $email.val('');
                     $message.val('');
+                    resetFormMessage();
                 },
                 error: function(err) {
-                    $contact_form.find('.alert--loading').hide();
-                    $contact_form.append('<div class="form-message alert--error">Ops, there was an error. Please try again.</div>');
+                    $form_message.text('Ops, there was an error. Please try again.');
+                    resetFormMessage();
                 }
             });
 

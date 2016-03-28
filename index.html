@@ -240,15 +240,15 @@
                 data: $(this).serialize(),
                 dataType: "json",
                 beforeSend: function() {
-                    $contact_form.append('<div class="alert alert--loading">Sending message…</div>');
+                    $contact_form.append('<div class="form-message alert--loading">Sending message…</div>');
                 },
                 success: function(data) {
                     $contact_form.find('.alert--loading').hide();
-                    $contact_form.append('<div class="alert alert--success">Message sent!</div>');
+                    $contact_form.append('<div class="form-message alert--success">Message sent!</div>');
                 },
                 error: function(err) {
                     $contact_form.find('.alert--loading').hide();
-                    $contact_form.append('<div class="alert alert--error">Ops, there was an error. Please try again.</div>');
+                    $contact_form.append('<div class="form-message alert--error">Ops, there was an error. Please try again.</div>');
                 }
             });
 

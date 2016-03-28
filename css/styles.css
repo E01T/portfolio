@@ -394,6 +394,11 @@ legend {
 	color: #fff;
 }
 
+.form-message {
+	color: #c4d92e;
+	font-size: 1em;
+}
+
 /* ==== Footer ==== */
 footer {
 	display: flex;

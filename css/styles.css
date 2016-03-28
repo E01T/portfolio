@@ -396,7 +396,9 @@ legend {
 
 .form-message {
 	color: #c4d92e;
-	font-size: 1em;
+    font-size: 1.2em;
+    text-align: center;
+    margin: .5em auto;
 }
 
 /* ==== Footer ==== */

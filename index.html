@@ -244,9 +244,9 @@
                     $contact_form.find('.alert--loading').hide();
                     $contact_form.append('<div class="form-message alert--success">Message sent!</div>');
                     // Empty contact form
-                    $name.val();
-                    $email.val();
-                    $message.val();
+                    $name.val('');
+                    $email.val('');
+                    $message.val('');
                 },
                 error: function(err) {
                     $contact_form.find('.alert--loading').hide();

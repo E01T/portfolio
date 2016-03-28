@@ -226,8 +226,7 @@
         function resetFormMessage() {
             setTimeout(function() {
                 $form_message.text('');
-                $form_message.removeClass('hide-me');
-            }, 6000);
+            }, 5000);
         }
 
         // Form submission send to email via http://formspree.io/
@@ -241,7 +240,6 @@
                 dataType: "json",
                 beforeSend: function() {
                     $form_message.text('Sending message…');
-                    $form_message.addClass('hide-me');
                 },
                 success: function(data) {
                     $form_message.text('Message sent!');

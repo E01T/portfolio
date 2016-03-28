@@ -322,11 +322,8 @@ div#project h3 {
 div#get_in_touch {
 	flex: 1 0 0;
 	min-width: 185.5px;
+	position: relative;
 }
-
-input, textarea {
-}
-
 div#get_in_touch h3 {
 	text-align: left;
 	margin: 0;
@@ -408,37 +405,11 @@ legend {
 }
 
 .form-message {
+	position: absolute;
 	color: #c4d92e;
     font-size: 1.2em;
     text-align: center;
     margin: .5em auto;
-}
-
-.hide-me {
-    -moz-animation: cssAnimation 0s ease-in 5s forwards;
-    /* Firefox */
-    -webkit-animation: cssAnimation 0s ease-in 5s forwards;
-    /* Safari and Chrome */
-    -o-animation: cssAnimation 0s ease-in 5s forwards;
-    /* Opera */
-    animation: cssAnimation 0s ease-in 5s forwards;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-}
-
-@keyframes cssAnimation {
-    to {
-        width:0;
-        height:0;
-        visibility:hidden;
-    }
-}
-@-webkit-keyframes cssAnimation {
-    to {
-        width:0;
-        height:0;
-        visibility:hidden;
-    }
 }
 
 /* ==== Footer ==== */

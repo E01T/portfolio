@@ -341,6 +341,17 @@ ul#contact_list li {
 	margin: 0;
 	padding: 0 0 10px 0;
 }
+
+/* The following two rules overide the default google chrome autofill behaviour */
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+	background-color: transparent !important; 
+    color: #c4d92e !important;
+    background-image: none !important;
+}
+input:-webkit-autofill:hover, textarea:-webkit-autofill:hover, select:-webkit-autofill:hover {
+	background-image: url('http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117619/portfolio/blacktrans.png') !important;
+}
+
 ul#contact_list li #name, #email , #message, #send {
 	background-color: transparent;
 	/*background-image:url('http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117619/portfolio/blacktrans.png');*/

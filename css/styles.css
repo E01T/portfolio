@@ -476,7 +476,15 @@ footer a:hover {
 }
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
+	header {
+		margin: 0 .5em;
+	}
+
+	nav.social-buttons {
+		margin: 1em 1.5em 0 .4em;
+	}
+
 	article#content {
 		display: flex;
 		flex-flow: column;
@@ -501,7 +509,7 @@ footer a:hover {
 	}
 
 	ul#project_box li {
-		flex: 0 0 25%;
+		flex: 0 0 20%;
 
 	}
 
@@ -535,7 +543,7 @@ footer a:hover {
 		margin: 0 auto;
 	}
 	
-} /* END @media screen and (max-width: 400px) */
+} /* END @media screen and (max-width: 600px) */
 
 @media screen and (max-width: 600px) and (orientation: landscape) {
 	article#content {
@@ -578,6 +586,13 @@ footer a:hover {
 		margin-bottom: .5em;
 	}
 
+}
+
+/* For iPhone 5 -> http://stackoverflow.com/questions/12539697/iphone-5-css-media-query */
+@media screen and (device-aspect-ratio: 40/71) {
+	div#logo {
+    	justify-content: flex-start;
+	}
 }
 
 

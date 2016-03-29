@@ -13,6 +13,7 @@
     <link rel='shortcut icon' href='http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117619/portfolio/shpere.gif' type='image/x-icon'/ >
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    
 </head>
 <body>
     <div id="wrapper">
@@ -201,15 +202,23 @@
             </footer>
     </div>
     <!-- END wrapper -->
-    <script   src="https://code.jquery.com/jquery-2.2.1.min.js"   integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="   crossorigin="anonymous">
+    <script   src="https://code.jquery.com/jquery-2.2.1.min.js"   integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous">
     </script>
-
+    <script>
+        $(document).bind('mobileinit',function(){
+            $.mobile.changePage.defaults.changeHash = false;
+            $.mobile.hashListeningEnabled = false;
+            $.mobile.pushStateEnabled = false;
+        }); 
+    </script> 
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript">
 
     $(document).ready(function() {
         var $images = $('.project-images');
         var $close_modal  = $('#close-modal');
         var $dumbBoxWrap  = $('#dumbBoxWrap');
+        var $dumbBox      = $('#dumbBox');
         var $project_image  = $('#project-image'); // Modal Window
         var $project_name = $('#project-name');
         var $project_description = $('#project-description');
@@ -315,6 +324,26 @@
             } 
         });
 
+        /**
+         * Swipe event
+         * @param  {swipeleft swiperight} Go with jQuery mobile
+         * @param  {[type]} event object passed by javascript
+         * @return {void}
+         */
+        $dumbBox.on('swipeleft swiperight', function(event) {
+            // console.log(event.type);
+            if(event.type == 'swipeleft') {
+                index = index - 1;
+                if (index == -1) {
+                    index = 9;
+                }
+                setModalValues(index);
+            }
+            else if (event.type == 'swiperight') {
+                index = (index + 1) % 10;
+                setModalValues(index);
+            } 
+        });
 
         /**
          * Loop through each project image and attach a click event

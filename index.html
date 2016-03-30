@@ -185,7 +185,7 @@
                                                 <textarea tabindex="12" rows="5" cols="20" placeholder="Leave your message" title="Leave your message" name="message" required id="message"/></textarea>
                                             </li>
                                         </ul>
-                                        <input tabindex="13" data-role="none" id="send" type="submit" value="Send"/>
+                                        <input tabindex="13" id="send" type="submit" value="Send"/>
                                     </fieldset>
                                 </form>
                                 <div class="form-message"></div>
@@ -204,15 +204,20 @@
     <!-- END wrapper -->
     <script   src="https://code.jquery.com/jquery-2.2.1.min.js"   integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous">
     </script>
-    <script>
-        $(document).bind('mobileinit',function(){
-            $.mobile.changePage.defaults.changeHash = false;
-            $.mobile.hashListeningEnabled = false;
-            $.mobile.pushStateEnabled = false;
-        }); 
     </script> 
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript">
+
+    // jQuery Core & mobile is loaded
+    // $(document).bind('mobileinit',function(){
+    //         $.mobile.changePage.defaults.changeHash = false;
+    //         $.mobile.hashListeningEnabled = false;
+    //         $.mobile.pushStateEnabled = false;
+    // }); 
+
+    // Prevent jQuery Mobile adding classes all over the place
+    // http://stackoverflow.com/questions/10226974/how-to-prevent-jquery-mobile-adding-its-classes-to-html-elements
+    $.mobile.autoInitializePage = false;
 
     $(document).ready(function() {
         var $images = $('.project-images');

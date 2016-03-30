@@ -204,20 +204,23 @@
     <!-- END wrapper -->
     <script   src="https://code.jquery.com/jquery-2.2.1.min.js"   integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous">
     </script>
-    </script> 
-    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    </script>
+    <script>
+        // http://stackoverflow.com/questions/32453806/uncaught-securityerror-failed-to-execute-replacestate-on-history-cannot-be
+        $(document).bind('mobileinit',function(){
+            $.mobile.changePage.defaults.changeHash = false;
+            $.mobile.hashListeningEnabled = false;
+            $.mobile.pushStateEnabled = false;
+            $.mobile.autoInitializePage = false;
+            // Prevent jQuery Mobile adding classes all over the place
+    // http://stackoverflow.com/questions/10226974/how-to-prevent-jquery-mobile-adding-its-classes-to-html-elements
+            // $.mobile.autoInitializePage = false;
+        });
+    </script>  
     <script type="text/javascript">
 
-    // jQuery Core & mobile is loaded
-    // $(document).bind('mobileinit',function(){
-    //         $.mobile.changePage.defaults.changeHash = false;
-    //         $.mobile.hashListeningEnabled = false;
-    //         $.mobile.pushStateEnabled = false;
-    // }); 
-
-    // Prevent jQuery Mobile adding classes all over the place
-    // http://stackoverflow.com/questions/10226974/how-to-prevent-jquery-mobile-adding-its-classes-to-html-elements
-    $.mobile.autoInitializePage = false;
+    //                  works on most browsers      works on IE10/11 and Surface
+    var supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
 
     $(document).ready(function() {
         var $images = $('.project-images');
@@ -237,7 +240,46 @@
         var $contact_form = $('#contact-form');
         var $form_message = $('div.form-message');
 
-        // reset form message
+        /**
+         * if touch event is supported, conditionally load jQuery mobile
+         *  and attach swipe events to modal window content 
+         * @param  {[type]} boolean
+         * @return {[type]} void
+         */
+        if(supportsTouch) {
+            var url = 'https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js';
+            $.getScript( url, function( data, textStatus, jqxhr ) {
+                // console.log( data ); // Data returned
+                // console.log( textStatus ); // Success
+                // console.log( jqxhr.status ); // 200
+                // console.log( "Load was performed." );
+                
+            }).done(function() {
+                /**
+                 * Swipe event
+                 * @param  {swipeleft swiperight} Go with jQuery mobile
+                 * @param  {[type]} event object passed by javascript
+                 * @return {[type]} void
+                 */
+                $dumbBox.on('swipeleft swiperight', function(event) {
+                    // console.log(event.type);
+                    if(event.type == 'swipeleft') {
+                        index = index - 1;
+                        if (index == -1) {
+                            index = 9;
+                        }
+                        setModalValues(index);
+                    }
+                    else if (event.type == 'swiperight') {
+                        index = (index + 1) % 10;
+                        setModalValues(index);
+                    } 
+                });
+            });
+        }
+
+        // Reset form message
+        // Clear message after 5 seconds
         function resetFormMessage() {
             setTimeout(function() {
                 $form_message.text('');
@@ -324,27 +366,6 @@
                 setModalValues(index);
             }
             else if (this.id == 'right-arrow') {
-                index = (index + 1) % 10;
-                setModalValues(index);
-            } 
-        });
-
-        /**
-         * Swipe event
-         * @param  {swipeleft swiperight} Go with jQuery mobile
-         * @param  {[type]} event object passed by javascript
-         * @return {void}
-         */
-        $dumbBox.on('swipeleft swiperight', function(event) {
-            // console.log(event.type);
-            if(event.type == 'swipeleft') {
-                index = index - 1;
-                if (index == -1) {
-                    index = 9;
-                }
-                setModalValues(index);
-            }
-            else if (event.type == 'swiperight') {
                 index = (index + 1) % 10;
                 setModalValues(index);
             } 

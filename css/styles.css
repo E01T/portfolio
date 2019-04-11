@@ -1,17 +1,85 @@
 /* ==== Eric Meyer's reset css ==== */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -19,94 +87,128 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
 /* ==== Global Styles ==== */
-a img { border:none } /* Gets rid of IE's blue borders */
-a:focus { outline: none; }
-a, li, p, h2, h3, h4, h5, h6{
-	text-decoration:none;
-	color:#fff;
+a img {
+	border: none
 }
+
+/* Gets rid of IE's blue borders */
+a:focus {
+	outline: none;
+}
+
+a,
+li,
+p,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-decoration: none;
+	color: #fff;
+}
+
 p {
-	font-size:0.9em;
-	margin-bottom:1em;
-	margin-top:1em;
-	padding-bottom:1em;
-	padding-top:1em;
+	font-size: 0.9em;
+	margin-bottom: 1em;
+	margin-top: 1em;
+	padding-bottom: 1em;
+	padding-top: 1em;
 }
 
 div {
-	display:block;
+	display: block;
 }
 
 li {
-	list-style:none;
+	list-style: none;
 }
 
 .clear {
-	clear:both;
+	clear: both;
 }
 
 a.read_more {
-	color:#4169e1;
+	color: #4169e1;
 }
 
 a.read_more:hover {
-	border-bottom:1px dashed;
+	border-bottom: 1px dashed;
 }
 
 
 /* ==== Body ==== */
-body { 
-	background: url('http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117625/portfolio/grunge_light_blue.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-origin: border-box;
+body {
+	background: url('http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117625/portfolio/grunge_light_blue.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-origin: border-box;
 	background-clip: border-box;
 }
 
 /* ==== outer div (wrapper) ==== */
 #wrapper {
-    max-width:960px;
-    margin:50px auto;
-	padding:1em;
+	max-width: 960px;
+	margin: 50px auto;
+	padding: 1em;
 	display: flex;
 	flex-flow: column;
 }
 
- /* ==== header ==== */
+/* ==== header ==== */
 header {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
 
-div#logo { 
+div#logo {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-end;
@@ -114,13 +216,13 @@ div#logo {
 
 /* ==== Logo Image ==== */
 #logo img {
-	width:70px;
-	height:70px;
-	padding-top:0px;
-	padding-right:10px;
-	padding-left:3px;
-	padding-bottom:0px;
-	margin:0px;
+	width: 70px;
+	height: 70px;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-left: 3px;
+	padding-bottom: 0px;
+	margin: 0px;
 	-moz-transition: all 0.3s ease-in-out;
 	-webkit-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
@@ -129,12 +231,12 @@ div#logo {
 
 /* ==== Logo Title ==== */
 #logo #title {
-	text-align:left;
-	vertical-align:baseline;
-	letter-spacing:.1em;
-	margin:0px;
-	padding:0 0 0 0;
-	font-size:3em;
+	text-align: left;
+	vertical-align: baseline;
+	letter-spacing: .1em;
+	margin: 0px;
+	padding: 0 0 0 0;
+	font-size: 3em;
 	-moz-transition: all 0.3s ease-in-out;
 	-webkit-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
@@ -157,7 +259,7 @@ div#logo {
 }
 
 #title a:hover {
-	color:#fff;
+	color: #fff;
 }
 
 /* ==== Social Buttons ==== */
@@ -192,7 +294,7 @@ ul#social-buttons img:hover {
 /* ==== Main Content ==== */
 #main {
 	background-image: url('http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117619/portfolio/blacktrans.png');
-	padding:1em;
+	padding: 1em;
 }
 
 article#content {
@@ -210,19 +312,18 @@ section#left-column {
 	justify-content: flex-start;
 }
 
-div#intro-text {
-}
+div#intro-text {}
 
-div#intro-text h2 {
-}
+div#intro-text h2 {}
 
 div#intro-text p {
 	padding: 0 1em 0 0;
 	font-size: 1em;
 }
+
 a.first_word {
-	color:#c4d92e;
-	font-size:x-large;
+	color: #c4d92e;
+	font-size: x-large;
 }
 
 div#skills {
@@ -252,7 +353,7 @@ section#right-column h3 {
 }
 
 div#slider {
-	background-image:url('http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117619/portfolio/blacktrans.png');
+	background-image: url('http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117619/portfolio/blacktrans.png');
 }
 
 div#slider #slider_img {
@@ -294,8 +395,7 @@ div#project h3 {
 	padding: 10px 0 0 0;
 }
 
-#project_box li {
-}
+#project_box li {}
 
 #project_box li a {
 	opacity: .8;
@@ -310,8 +410,8 @@ div#project h3 {
 }
 
 #project_box li a img {
-	width:50px;
-	height:50px;
+	width: 50px;
+	height: 50px;
 	flex: 1 0 25%;
 	margin: 0 .9em .5em 0;
 	border: 1px dashed #c4d92e;
@@ -324,15 +424,18 @@ div#get_in_touch {
 	min-width: 185.5px;
 	position: relative;
 }
+
 div#get_in_touch h3 {
 	text-align: left;
 	margin: 0;
 	padding: 10px 0 0 0;
 }
+
 ul#contact_list {
 	text-align: left;
 	padding: 10px 0 0 0;
 }
+
 ul#contact_list li {
 	list-style: none;
 	margin: 0;
@@ -340,18 +443,30 @@ ul#contact_list li {
 }
 
 /* The following two rules overide the default google chrome autofill behaviour */
-#name:-webkit-autofill, #email:-webkit-autofill, #message:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
-	background-color: transparent !important; 
-    color: #c4d92e !important;
-    background-image: none !important;
-     -webkit-box-shadow: 0 0 0px 1000px white inset;
-}
-#name:-webkit-autofill:hover, #email:-webkit-autofill:hover, #message:-webkit-autofill:hover, textarea:-webkit-autofill:hover, select:-webkit-autofill:hover {
-	background-image: url('http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117619/portfolio/blacktrans.png') !important;
-	 -webkit-box-shadow: 0 0 0px 1000px white inset;
+#name:-webkit-autofill,
+#email:-webkit-autofill,
+#message:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+	background-color: transparent !important;
+	color: #c4d92e !important;
+	background-image: none !important;
+	-webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 
-ul#contact_list li #name, #email , #message, #send {
+#name:-webkit-autofill:hover,
+#email:-webkit-autofill:hover,
+#message:-webkit-autofill:hover,
+textarea:-webkit-autofill:hover,
+select:-webkit-autofill:hover {
+	background-image: url('http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117619/portfolio/blacktrans.png') !important;
+	-webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+ul#contact_list li #name,
+#email,
+#message,
+#send {
 	background-color: transparent;
 	/*background-image:url('http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117619/portfolio/blacktrans.png');*/
 	color: #c4d92e;
@@ -361,28 +476,50 @@ ul#contact_list li #name, #email , #message, #send {
 	-moz-border-radius: 25px;
 	-webkit-border-radius: 25px;
 }
-#name, #email, #message {
+
+#name,
+#email,
+#message {
 	width: 100%;
 }
 
-ul#contact_list li #name:hover, #email:hover, #message:hover, #send:hover {
+ul#contact_list li #name:hover,
+#email:hover,
+#message:hover,
+#send:hover {
 	background-image: url('http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117619/portfolio/blacktrans.png');
 }
 
 ul#contact_list li #message {
-	overflow: hidden; /* hiddes the scroll bar from IE */
+	overflow: hidden;
+	/* hiddes the scroll bar from IE */
 }
 
 legend {
 	color: white;
 }
 
-::-webkit-input-placeholder { color: #c4d92e; padding-left: .9em; }
+::-webkit-input-placeholder {
+	color: #c4d92e;
+	padding-left: .9em;
+}
+
 /* Firefox 18- */
-:-moz-placeholder { color: #c4d92e; padding-left: .9em; }
+:-moz-placeholder {
+	color: #c4d92e;
+	padding-left: .9em;
+}
+
 /* Firefox 19+ */
-::-moz-placeholder { color: #c4d92e; padding-left: .9em; }
-:-ms-input-placeholder { color: #c4d92e; padding-left: .9em; }
+::-moz-placeholder {
+	color: #c4d92e;
+	padding-left: .9em;
+}
+
+:-ms-input-placeholder {
+	color: #c4d92e;
+	padding-left: .9em;
+}
 
 #message {
 	text-indent: 0.9em;
@@ -407,9 +544,9 @@ legend {
 .form-message {
 	position: absolute;
 	color: #c4d92e;
-    font-size: 1.2em;
-    text-align: center;
-    margin: .5em auto;
+	font-size: 1.2em;
+	text-align: center;
+	margin: .5em auto;
 }
 
 /* ==== Footer ==== */
@@ -418,16 +555,18 @@ footer {
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	align-items: center;
-	color:#fff;
+	color: #fff;
 	margin-left: 1em;
 }
+
 footer a {
-	color:#c4d92e;
-	font-size:1.2em;
+	color: #c4d92e;
+	font-size: 1.2em;
 }
+
 footer a:hover {
-	background-image:url('http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117619/portfolio/blacktrans.png');
-	color:#fff;
+	background-image: url('http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117619/portfolio/blacktrans.png');
+	color: #fff;
 }
 
 
@@ -450,7 +589,7 @@ footer a:hover {
 		top: 0;
 	}
 
-	div#dumbBox { 
+	div#dumbBox {
 		display: flex;
 		flex-flow: column;
 		justify-content: flex-start;
@@ -494,7 +633,7 @@ footer a:hover {
 	section#right-column {
 		order: 1;
 		justify-content: center;
-	} 
+	}
 
 	section#left-column {
 		order: 2;
@@ -521,7 +660,7 @@ footer a:hover {
 		top: 0;
 	}
 
-	div#dumbBox { 
+	div#dumbBox {
 		display: flex;
 		flex-flow: column;
 		justify-content: flex-start;
@@ -538,12 +677,14 @@ footer a:hover {
 	}
 
 	#project-image {
-		width: 100%;
+		/* width: 100%; */
 		float: none;
 		margin: 0 auto;
 	}
-	
-} /* END @media screen and (max-width: 600px) */
+
+}
+
+/* END @media screen and (max-width: 600px) */
 
 @media screen and (max-width: 600px) and (orientation: landscape) {
 	article#content {
@@ -555,14 +696,14 @@ footer a:hover {
 	section#right-column {
 		order: 1;
 		justify-content: center;
-	} 
+	}
 
 	section#left-column {
 		order: 2;
 		justify-content: center;
 	}
 
-	div#dumbBox { 
+	div#dumbBox {
 		display: flex;
 		flex-flow: column;
 		justify-content: flex-start;
@@ -591,7 +732,7 @@ footer a:hover {
 /* For iPhone 5 -> http://stackoverflow.com/questions/12539697/iphone-5-css-media-query */
 @media screen and (device-aspect-ratio: 40/71) {
 	div#logo {
-    	justify-content: flex-start;
+		justify-content: flex-start;
 	}
 }
 
@@ -599,37 +740,48 @@ footer a:hover {
 /************************************************
 ************** Modal Dialog Box *****************
 ************************************************/
-#dumbBoxWrap { /* The div that shows/hides. */ 
-	display:none; /* starts out hidden */ 
-	z-index:40001; 
-	/* High z-index to ensure it appears above all content */ 
+#dumbBoxWrap {
+	/* The div that shows/hides. */
+	display: none;
+	/* starts out hidden */
+	z-index: 40001;
+	/* High z-index to ensure it appears above all content */
 }
 
-#dumbBoxOverlay { /* Shades out background when selector is active */ 
-	position:fixed; 
-	width:100%; 
-	height:100%; 
-	background-color:black; 
-	opacity:.5; /* Sets opacity so it's partly transparent */ 
-	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE transparency */ 
-	filter:alpha(opacity=50); /* More IE transparency */ 
-	z-index:40001; 
-} 
+#dumbBoxOverlay {
+	/* Shades out background when selector is active */
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: .5;
+	/* Sets opacity so it's partly transparent */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	/* IE transparency */
+	filter: alpha(opacity=50);
+	/* More IE transparency */
+	z-index: 40001;
+}
 
-#vertical-offset { /* Fixed position to provide the vertical offset */ 
-	position:fixed; 
+#vertical-offset {
+	/* Fixed position to provide the vertical offset */
+	position: fixed;
 	left: 0;
-	width:100%; 
-	z-index:40002; /* ensures box appears above overlay */ 
+	width: 100%;
+	z-index: 40002;
+	/* ensures box appears above overlay */
 }
 
-#dumbBox { /* The actual box, centered in the fixed-position div */ 
-	width: 80%; /* Whatever width you want the box to be */ 
-	position:relative; 
-	margin:0 auto; /* Everything below is just visual styling */ 
-	background-color:white; 
-	padding:10px; 
-	border:1px solid black; 
+#dumbBox {
+	/* The actual box, centered in the fixed-position div */
+	width: 80%;
+	/* Whatever width you want the box to be */
+	position: relative;
+	margin: 0 auto;
+	/* Everything below is just visual styling */
+	background-color: white;
+	padding: 10px;
+	border: 1px solid black;
 	font-family: cursive;
 	overflow: hidden;
 	z-index: 40003;
@@ -651,20 +803,26 @@ h2#project-name {
 	color: black;
 }
 
-#modal-navigation {
-}
+#modal-navigation {}
 
 #close-modal {
 	margin-left: .5em;
 }
+
 #right-arrow {
 	margin-left: .5em;
 }
-#close-modal, #left-arrow, #right-arrow { 
+
+#close-modal,
+#left-arrow,
+#right-arrow {
 	color: #4169e1;
 	cursor: pointer;
-} 
-#close-modal:hover, #left-arrow:hover, #right-arrow:hover {
+}
+
+#close-modal:hover,
+#left-arrow:hover,
+#right-arrow:hover {
 	color: #c4d92e;
 }
 
@@ -677,6 +835,7 @@ a#project-url {
 	text-decoration: underline;
 	font-size: .8em;
 }
+
 a#project-url:hover {
 	color: black;
 	text-decoration: none;

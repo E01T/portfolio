@@ -89,17 +89,17 @@
                             <h2>Welcome</h2>
                             <p>
                                 <a class="first_word" href="#" target="_self">Efthyvoulos Tsouderos</a><br>
-                                A freelance web designer/developer expert in HTML5, CSS3, JavaScript including jQuery, React, Redux, nodeJS, php, sql, Twitter Bootstrap to name a few. My work includes theme &amp; plugin developement for WordPress platform, and various front-end and isomorphic JavaScript applications <br><a class="read_more" href="https://www.linkedin.com/in/efthyvoulostsouderos" target="_blank">full resume...</a>
+                                A freelance web designer/developer expert in HTML5, CSS3, JavaScript including jQuery, React, Redux, nodeJS, php, sql, Twitter Bootstrap, Materialize to name a few. My work includes theme &amp; plugin developement for WordPress platform, and various front-end and isomorphic JavaScript applications <br><a class="read_more" href="https://www.linkedin.com/in/efthyvoulostsouderos" target="_blank">full resume...</a>
                             </p>
                         </div>
                         <div id="skills" >
                             <h3>Skills</h3>
                                 <ul>
-                                    <li>Photoshop, Fireworks and Illustrator</li>
+                                    <li>Photoshop</li>
                                     <li>HTML5 & CSS3</li>
                                     <li>Responsive Web Design</li>
-                                    <li>JavaScript, jQuery, React, Redux, NodeJS, Meteor</li>
-                                    <li>PHP, WordPress, Phalcon, Laravel</li>
+                                    <li>JavaScript, jQuery, React, Redux</li>
+                                    <li>NodeJS, ExpressJS, PHP, WordPress </li>
                                     <li>Databases, both relational and non-relational (Sql, NoSQL)</li>
                                 </ul>
                         </div>
@@ -127,7 +127,7 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <img tabindex="2" class="project-images" id="random-quote" src="http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117917/portfolio/random_quote_gen.png" title="Random Quote Generator" alt="random quote generator"/>
+                                            <img tabindex="2" class="project-images" id="word-cloud-animation" src="https://res.cloudinary.com/dsh8uhpna/image/upload/v1553598420/word_cloud_animation_web_emyufs.png" title="Word Cloud Animation" alt="word cloud animation"/>
                                         </a>
                                     </li>
                                     <li>
@@ -142,7 +142,7 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <img tabindex="5" class="project-images" id="twitch-tv" src="http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117621/portfolio/twitch_tv.png" title="Twitch Tv" alt="twitch tv application"/>
+                                            <img tabindex="5" class="project-images" id="drum-machine" src="https://res.cloudinary.com/dsh8uhpna/image/upload/v1554981847/portfolio/drum_machin.png" title="Drum Machine Application" alt="drum machine application"/>
                                         </a>
                                     </li>
                                     <li>
@@ -328,6 +328,8 @@
             $project_description.text(projects[index].description);
             $project_url.attr('href', projects[index].url);
             $project_url.text(projects[index].name.toLowerCase());
+            $project_image.attr('width', "384px");
+            $project_image.attr('height', "225px");
         }
 
         /**
@@ -468,14 +470,14 @@
                 'img_url': 'http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117619/portfolio/ncrypt_email.png',
                 'name': 'NCRYPT EMAIL',
                 'description': 'The most powerful e-mail address encryption tool. This plugin is based on mcrypt php library. Both the encryption and decryption occurs on the server. JavaScript is used (an AJAX Post Request) to dynamically contact the server, where the e-mail decryption happens and send back the results. Regardless of how many e-mails are on a webpage only ONE AJAX request takes place. It utilizes the load event which means that only when the page is fully loaded the request – response happens (it will not slow down your page rendering). The actual display happens when you hover over the e-mail. Native JavaScript is used (no library dependencies). It is lightning fast and only 4 kb small.',
-                'url': 'http://the-never-never-land.com/encrypt-email-address-wordpress-plugin/'
+                'url': 'http://ncrypt-email-address.onlinewebshop.net/'
             },
             {
-                'id': 'random-quote',
-                'img_url': 'http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117917/portfolio/random_quote_gen.png',
-                'name': 'Random Quote Generator',
-                'description': "You can click a button to show me a new random quote. You can press a button to tweet out a quote.",
-                'url': 'http://codepen.io/E01T/full/NGpONW/'
+                'id': 'word-cloud-animation',
+                'img_url': 'https://res.cloudinary.com/dsh8uhpna/image/upload/c_scale,h_225,w_348/v1553598420/word_cloud_animation_web_emyufs.png',
+                'name': 'Word Cloud Animation',
+                'description': "A beautifull word cloud animation. Varius keywords randomly flash/highlight.",
+                'url': 'https://codepen.io/E01T/full/VBBaee'
             },
             {
                 'id': 'local-weather',
@@ -492,11 +494,11 @@
                 'url': 'http://codepen.io/E01T/full/QjxrBY/'
             },
             {
-                'id': 'twitch-tv',
-                'img_url': 'http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117621/portfolio/twitch_tv.png',
-                'name': 'Twitch tv Application',
-                'description': "You can see whether Free Code Camp is currently streaming on Twitch.tv. You can click the status output and be sent directly to the Free Code Camp's Twitch.tv channel. If a Twitch user is currently streaming, I can see additional details about what they are streaming.You will see a placeholder notification if a streamer has closed their Twitch account (or the account never existed). You can verify this works by adding brunofin and comster404 to your array of Twitch streamers.",
-                'url': 'http://codepen.io/E01T/full/dYmBoy/'
+                'id': 'drum-machine',
+                'img_url': 'https://res.cloudinary.com/dsh8uhpna/image/upload/v1554994176/portfolio/drum_machine_web.png',
+                'name': 'Drum Machine Application',
+                'description': "Entertain yourself with this drum machine application.",
+                'url': 'https://codepen.io/E01T/full/wZBqJV'
             },
             {
                 'id': 'js-calc',

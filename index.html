@@ -16,9 +16,9 @@
 
 </head>
 <body>
-    <div id="wrapper">
+    <div id="wrapper" role="article">
         <!-- Simple Modal Window -->
-        <div id="dumbBoxWrap">
+        <div id="dumbBoxWrap" role="dialog">
             <div id="dumbBoxOverlay">&nbsp;</div>
             <div id="vertical-offset">
                 <div id="dumbBox" tabindex="0">
@@ -81,11 +81,11 @@
             <!-- END Social Media Buttons -->
             </header>
             <!-- END masthead -->
-            <div id="main">
+            <div role="main" id="main">
                 <article id="content">
                     <!-- START Left Column -->
                     <section id="left-column">
-                        <div id="intro-text">
+                        <div role="columnheader" id="intro-text">
                             <h2>Welcome</h2>
                             <p>
                                 <a class="first_word" href="#" target="_self">Efthyvoulos Tsouderos</a><br>
@@ -108,7 +108,7 @@
 
                     <!-- START Right Column -->
                     <section id="right-column">
-                        <div id="slider" autofocus="on">
+                        <div role="columnheader" id="slider" autofocus="on">
                             <img id="slider_img" src="http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117623/portfolio/img.jpg" alt="slider" />
                         </div>
                         <div id="lower-columns">
@@ -117,7 +117,7 @@
                                 <ul id="project_box">
                                     <li>
                                         <a href="#" tabindex="-1">
-                                            <img id="0" tabindex="0" class="project-images" src="https://res.cloudinary.com/dsh8uhpna/image/upload/v1593446994/portfolio/markup_editor.png" title="Markup Editor" alt="Markup editor written in svelte"/>
+                                            <img id="0" tabindex="0" class="project-images" src="https://res.cloudinary.com/dsh8uhpna/image/upload/v1599818419/portfolio/hn-dirt.jpg" title="Hacker News" alt="Hacker News"/>
                                         </a>
                                     </li>
                                     <li>
@@ -137,7 +137,7 @@
                                     </li>
                                     <li>
                                         <a href="#" tabindex="-1">
-                                            <img id="4" tabindex="0" class="project-images" src="http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117621/portfolio/wiki_search.png" title="Wikipedia viewer" alt="wikipedia viewer"/>
+                                            <img id="4" tabindex="0" class="project-images" src="https://res.cloudinary.com/dsh8uhpna/image/upload/v1593446994/portfolio/markup_editor.png" title="Markup Editor" alt="Markup editor written in svelte"/>
                                         </a>
                                     </li>
                                     <li>
@@ -150,7 +150,6 @@
                                             <img id="6" tabindex="0" class="project-images" src="http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117625/portfolio/calculator.png" title="JavaScript Calculator" alt="javascript calculator"/>
                                         </a>
                                     </li>
-
                                     <li>
                                         <a href="#" tabindex="-1">
                                             <img id="7" tabindex="0" class="project-images" src="http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117618/portfolio/pomodoro.png" title="Pomodoro Clock" alt="pomodoro clock application"/>
@@ -169,7 +168,7 @@
                                 </ul>
                             </div>
                             <!-- START Contact Form A.K.A. get_in_touch -->
-                            <div id="get_in_touch">
+                            <div role="form" id="get_in_touch">
                                 <form id="contact-form" action="https://formspree.io/etsouderos@gmail.com" method="post" autocomplete="off">
                                     <fieldset>
                                         <legend>Get in Touch</legend>
@@ -480,6 +479,13 @@
         
         var projects = [
             {
+                'id': 'hacker-news',
+                'img_url': 'https://res.cloudinary.com/dsh8uhpna/image/upload/v1599818419/portfolio/hn-dirt.jpg',
+                'name': 'Hacker News',
+                'description': "Hacker News Clone made using Ionic React, and firebase/firestore",
+                'url': 'https://hackernews-8b245.web.app/news'
+            },
+            {
                 'id': 'markup-editor',
                 'img_url': 'https://res.cloudinary.com/dsh8uhpna/image/upload/v1593446994/portfolio/markup_editor.png',
                 'name': 'Markup Editor',
@@ -506,13 +512,6 @@
                 'name': 'Show Local Weather',
                 'description': "You can see the weather in my current location. You can see a different background image (e.g. snowy mountain, hot desert) depending on the weather. Additional features include humidity, and temperature in Fahrenheit and Celsius.",
                 'url': 'http://codepen.io/E01T/full/wMQRmm/'
-            },
-            {
-                'id': 'wikipedia-viewer',
-                'img_url': 'http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117621/portfolio/wiki_search.png',
-                'name': 'Wikipedia Viewer',
-                'description': "You can search Wikipedia entries in a search box and see the resulting Wikipedia entries. You can click a button to see a random Wikipedia entry.",
-                'url': 'http://codepen.io/E01T/full/QjxrBY/'
             },
             {
                 'id': 'drum-machine',

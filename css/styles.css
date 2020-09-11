@@ -317,12 +317,6 @@ section#left-column {
   justify-content: flex-start;
 }
 
-div#intro-text {
-}
-
-div#intro-text h2 {
-}
-
 div#intro-text p {
   padding: 0 1em 0 0;
   font-size: 1em;
@@ -401,9 +395,6 @@ div#project h3 {
   padding: 10px 0 0 0;
 }
 
-#project_box li {
-}
-
 #project_box li a {
   opacity: 0.8;
   -moz-opacity: 0.8;
@@ -459,6 +450,7 @@ select:-webkit-autofill {
   color: #c4d92e !important;
   background-image: none !important;
   -webkit-box-shadow: 0 0 0px 1000px white inset;
+  box-shadow: 0 0 0px 1000px white inset;
 }
 
 #name:-webkit-autofill:hover,
@@ -468,6 +460,7 @@ textarea:-webkit-autofill:hover,
 select:-webkit-autofill:hover {
   background-image: url("http://res.cloudinary.com/dsh8uhpna/image/upload/v1458117619/portfolio/blacktrans.png") !important;
   -webkit-box-shadow: 0 0 0px 1000px white inset;
+  box-sizing: 0 0 0px 1000px white inset;
 }
 
 ul#contact_list li #name,

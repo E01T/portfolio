@@ -391,7 +391,8 @@ ul#project_box {
 
 div#project h3 {
   margin: 0px;
-  padding: 10px 0 0 0;
+  padding: 10px 0;
+  line-height: 0;
 }
 
 #project_box li a {

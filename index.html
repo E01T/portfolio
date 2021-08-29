@@ -142,7 +142,7 @@
                                     </li>
                                     <li>
                                         <a href="#" tabindex="-1">
-                                            <img id="5" tabindex="0" class="project-images" src="https://res.cloudinary.com/dsh8uhpna/image/upload/v1554981847/portfolio/drum_machin.png" title="Drum Machine Application" alt="drum machine application"/>
+                                            <img id="5" tabindex="0" class="project-images" src="https://res.cloudinary.com/dsh8uhpna/image/upload/v1630221224/portfolio/luxury-hotel.png" title="Luxury Hotel" alt="Luxury Hotel react application"/>
                                         </a>
                                     </li>
                                     <li>
@@ -218,27 +218,27 @@
     </script>
     <script type="text/javascript">
 
-    //                  works on most browsers      works on IE10/11 and Surface
-    var supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
+    // works on most browsers      works on IE10/11 and Surface
+    const supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
 
     $(document).ready(function() {
-        var $images = $('.project-images');
-        var $close_modal  = $('#close-modal');
-        var $dumbBoxWrap  = $('#dumbBoxWrap');
-        var $dumbBox      = $('#dumbBox');
-        var $dumbBoxLink= $("#dumbBox a");
-        var $project_image  = $('#project-image'); // Modal Window
-        var $project_name = $('#project-name');
-        var $project_description = $('#project-description');
-        var $project_url = $('#project-url');
-        var image_open = false;
-        var index = 0;
-        var previouslyFocused = null;
-        var $name    = $('#name');
-        var $email   = $('#email');
-        var $message = $('#message');
-        var $contact_form = $('#contact-form');
-        var $form_message = $('div.form-message');
+        let $images = $('.project-images');
+        let $close_modal  = $('#close-modal');
+        let $dumbBoxWrap  = $('#dumbBoxWrap');
+        let $dumbBox      = $('#dumbBox');
+        let $dumbBoxLink= $("#dumbBox a");
+        let $project_image  = $('#project-image'); // Modal Window
+        let $project_name = $('#project-name');
+        let $project_description = $('#project-description');
+        let $project_url = $('#project-url');
+        let image_open = false;
+        let index = 0;
+        let previouslyFocused = null;
+        let $name    = $('#name');
+        let $email   = $('#email');
+        let $message = $('#message');
+        let $contact_form = $('#contact-form');
+        let $form_message = $('div.form-message');
 
         /**
          * if touch event is supported, conditionally load jQuery mobile
@@ -247,7 +247,7 @@
          * @return {[type]} void
          */
         if(supportsTouch) {
-            var url = 'https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js';
+            const url = 'https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js';
             $.getScript( url, function( data, textStatus, jqxhr ) {
                 // console.log( data ); // Data returned
                 // console.log( textStatus ); // Success
@@ -436,7 +436,7 @@
          * @return {[type]} void
          */
         $images.each( function() {
-            var $image = $( this );
+            const $image = $( this );
             $image.on( 'click' , function(event) {
                 image_open = true;
                 index = parseInt(event.target.id)
@@ -477,7 +477,7 @@
         }
 
         
-        var projects = [
+        const projects = [
             {
                 'id': 'hacker-news',
                 'img_url': 'https://res.cloudinary.com/dsh8uhpna/image/upload/v1599818419/portfolio/hn-dirt.jpg',
@@ -486,25 +486,18 @@
                 'url': 'https://hackernews-8b245.web.app/news'
             },
             {
-                'id': 'markup-editor',
-                'img_url': 'https://res.cloudinary.com/dsh8uhpna/image/upload/v1593446994/portfolio/markup_editor.png',
-                'name': 'Markup Editor',
-                'description': 'Simple markup editor coded in svelte',
-                'url': 'https://elastic-pasteur-f21a3e.netlify.app/'
-            },
-            {
                 'id': 'svelte-slideshow',
                 'img_url': 'https://res.cloudinary.com/dsh8uhpna/image/upload/v1593447288/portfolio/svelte_slideshow.png',
                 'name': 'Slideshow',
                 'description': 'Simple responsive slideshow coded in svelte.',
-                'url': 'https://optimistic-carson-820f70.netlify.app/'
+                'url': 'https://svelte-slide-show.netlify.app/'
             },
             {
                 'id': 'photo-gallery',
                 'img_url': 'https://res.cloudinary.com/dsh8uhpna/image/upload/v1593447618/portfolio/photo_gallery.png',
                 'name': 'Photo Gallery',
                 'description': 'Responsive photo gallery coded in svelte',
-                'url': 'https://naughty-meitner-4fa3f2.netlify.app/'
+                'url': 'https://svelte-gallery.netlify.app/'
             },
             {
                 'id': 'local-weather',
@@ -514,11 +507,18 @@
                 'url': 'http://codepen.io/E01T/full/wMQRmm/'
             },
             {
-                'id': 'drum-machine',
-                'img_url': 'https://res.cloudinary.com/dsh8uhpna/image/upload/v1554994176/portfolio/drum_machine_web.png',
-                'name': 'Drum Machine Application',
-                'description': "Entertain yourself with this drum machine application.",
-                'url': 'https://codepen.io/E01T/full/wZBqJV'
+                'id': 'markup-editor',
+                'img_url': 'https://res.cloudinary.com/dsh8uhpna/image/upload/v1593446994/portfolio/markup_editor.png',
+                'name': 'Markup Editor',
+                'description': 'Simple markup editor coded in svelte',
+                'url': 'https://sveltejs-markdown-editor.netlify.app/'
+            },
+            {
+                'id': 'luxury-hotel',
+                'img_url': 'https://res.cloudinary.com/dsh8uhpna/image/upload/v1630221224/portfolio/luxury-hotel.png',
+                'name': 'Luxury Hotel',
+                'description': "Luxury hotel application made with ReactJS",
+                'url': 'https://hotel-luxury.netlify.app/'
             },
             {
                 'id': 'js-calc',
